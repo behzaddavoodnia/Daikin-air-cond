@@ -39,6 +39,8 @@ public:
     virtual float getMaxTemp();
     virtual float getCurrTemp();
     
+    virtual float UpdateCurrTemp(float newTemp);
+    virtual float SenseTempFromSensor(float analogTemp);
     virtual void checkValid(float minVal, float maxVal);
     virtual void showTemp();
 

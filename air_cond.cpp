@@ -39,10 +39,21 @@ float air_cond::getCurrTemp(){
 }
 
 
+float air_cond::SenseTempFromSensor(float analogTemp){
+
+    return analogTemp;
+}
+
+void air_cond::UpdateCurrTemp(float newTemp){
+    
+    _currentTemp += newTemp;
+}
+
 
 void air_cond::showTemp(){
     
-    std::cout << "Tempreture is between: " << getMinTemp() <<" and " << getMaxTemp() << " \n";
+    std::cout << "Desirable Tempreture is between: " << getMinTemp() <<" and " << getMaxTemp() << " \n";
+    std::cout << "Current Tempreture is: " << getCurrTemp() << "\n";
 
 }
 

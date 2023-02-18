@@ -6,7 +6,7 @@
 int main(int argc, char* argv[]){
     
     float min, max;
-    
+
     air_cond ac(-100, 300);
     
     std::cout << "Hello User! Please enter minimum and maximum tempreture: \n";
@@ -16,6 +16,8 @@ int main(int argc, char* argv[]){
 
     ac.setMinTemp(min);
     ac.setMaxTemp(max);
+    ac.setCurrTemp(ac.SenseTempFromSensor(CURR_TEMP));
+    
     ac.showTemp();
 
 
