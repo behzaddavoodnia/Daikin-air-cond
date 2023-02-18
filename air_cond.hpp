@@ -10,7 +10,7 @@
 #define MAX_TEMP 1500
 #define MIN_TEMP -273
 #define SENSE_TEMP 20
-#define TEMP_STEP 0.25
+#define TEMP_STEP 0.1
 #define HEATER_PWR 0.25
 #define COOLER_PWR 0.25
 
@@ -57,7 +57,7 @@ public:
     virtual void UpdateCurrTemp(float heaterPower, float coolerPower);
     virtual float SenseTempFromSensor(float analogTemp);
     virtual void checkValid(float minVal, float maxVal);
-    virtual void showInitTemp();
+    virtual void showSensedTemp();
     virtual void showCurrTemp();
 
 
