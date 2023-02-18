@@ -1,5 +1,8 @@
+#include <iostream>
+
 #ifndef AIR_COND_H
 #define AIR_COND_H
+
 
 #define MAX_TEMP 1500;
 #define MIN_TEMP -273;
@@ -7,19 +10,28 @@
 class air_cond {
 
 private:
- int minTemp = MIN_TEMP;
- int MaxTemp = MAX_TEMP;
+
+ int _minTemp = MAX_TEMP;
+ int _MaxTemp = MIN_TEMP;
+
+
 
 public:
 
-virtual ~air_cond() {};
-air_cond(int min, int max) : minTemp(min), MaxTemp(max) {}
+    virtual ~air_cond(){};
 
-virtual int getMinTemp(int _minTemp);
-virtual int getMaxTemp(int _MaxTemp);
+    air_cond (int min, int max) : _minTemp(min), _MaxTemp(max) {
 
-virtual int setMinTemp(int _minTemp);
-virtual int setMaxTemp(int _MaxTemp);
+        std::cout << "Hello Daikin!\n";
+    };
+
+    virtual int getMinTemp();
+    virtual int getMaxTemp();
+
+    virtual void setMinTemp(int minTemp);
+    virtual void setMaxTemp(int MaxTemp);
+
+    virtual void showTemp();
 
 
 };

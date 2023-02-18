@@ -1,25 +1,32 @@
 #include "air_cond.hpp"
 
-int air_cond::setMinTemp(int _minTemp){
 
-    minTemp = _minTemp;
+void air_cond::setMinTemp(int minTemp){
 
-}
-
-int air_cond::setMaxTemp(int _MaxTemp){
-
-    MaxTemp = _MaxTemp;
+    _minTemp = minTemp;
 
 }
 
+void air_cond::setMaxTemp(int MaxTemp){
 
-int air_cond::getMinTemp(int _minTemp) {
+    _MaxTemp = MaxTemp;
+
+}
+
+
+int air_cond::getMinTemp() {
 
     return _minTemp;
 }
 
 
-int air_cond::getMaxTemp(int _MaxTemp) {
+int air_cond::getMaxTemp() {
     
     return _MaxTemp;
+}
+
+void air_cond::showTemp(){
+    
+    std::cout << "Tempreture is between: " << _minTemp << " and " << _MaxTemp << " \n";
+
 }
