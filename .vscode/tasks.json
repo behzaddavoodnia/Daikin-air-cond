@@ -8,6 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                "air_cond.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
