@@ -5,10 +5,17 @@
 
 int main(int argc, char* argv[]){
     
+    float min, max;
+    
     air_cond ac(-100, 300);
     
-    ac.setMinTemp(18);
-    ac.setMaxTemp(22);
+    std::cout << "Hello User! Please enter minimum and maximum tempreture: \n";
+    std::cin >> min;
+    std::cin >> max;
+    ac.checkValid(min, max);
+
+    ac.setMinTemp(min);
+    ac.setMaxTemp(max);
     ac.showTemp();
 
 
