@@ -1,25 +1,31 @@
 ======== How to build and run =========
-1- sudo apt install google-mock && libgmock-dev
 
-2- download google test suit from https://github.com/google/googletest/archive/refs/tags/v1.13.0.zip
-unzip file
+1. sudo apt install google-mock && libgmock-dev
 
-3- sudo cmake CMakeLists.txt 
-4- sudo make
+2. download google test suit from https://github.com/google/googletest/archive/refs/tags/v1.13.0.zip and unzip file
 
-5- cd lib
-6- sudo cp *.a /usr/lib
+3. cd path/to/googletest
 
-7- cd ../googlemock/include
-8- sudo cp -r gmock /usr/local/include/
+4. sudo cmake CMakeLists.txt 
 
-9- cd ../../googletest/include
-10- sudo cp -r gtest /usr/local/include/
+5. sudo make
 
-11- Now you can include gtest and gmock header files in your code
-12- Go to your project code directory. 
+6. cd lib
 
-13- mkdir build && cd build
-14- cmake .. && make
-15- ./mainApp
-16- ./testApp
+7. sudo cp *.a /usr/lib
+
+8. cd ../googlemock/include
+
+9. sudo cp -r gmock /usr/local/include/
+
+10. cd ../../googletest/include
+
+11. sudo cp -r gtest /usr/local/include/
+
+12. Now you can include gtest and gmock header files in your code
+13. Go to your project code directory. 
+
+14. mkdir build && cd build
+15. cmake .. && make
+16. ./mainApp
+17. ./testApp
