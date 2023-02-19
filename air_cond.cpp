@@ -20,8 +20,8 @@ void air_cond::setCurrTemp(float currTemp){
 }
 
 
-
 float air_cond::getMinTemp() {
+
 
     return _minTemp;
 }
@@ -56,7 +56,10 @@ void air_cond::Init(){
     std::cout << "Hello User! Please enter minimum and maximum tempreture (°C): \n";
     std::cin >> min;
     std::cin >> max;
-    checkValid(min, max);
+
+    if (!checkValid(min, max))
+        exit(EXIT_FAILURE);
+    
     setMinTemp(min);
     setMaxTemp(max);
     setGoalTemp(min, max);
@@ -78,7 +81,7 @@ void air_cond::UpdateCurrTemp(float heaterPower, float coolerPower){
         mood = cold;
         std::cout << "Now, Wheather is: " << _currentTemp << " °C and it's too cold! Starting heater...\n";
         
-        while(_currentTemp <= _minTemp){
+        while(_currentTemp < _minTemp){
         _currentTemp += heaterPower;
         _engExeTime ++;
         }
@@ -88,7 +91,7 @@ void air_cond::UpdateCurrTemp(float heaterPower, float coolerPower){
         mood = hot;
         std::cout << "Now, Wheather is: " << _currentTemp << " °C and it's too hot! Starting cooler...\n";
 
-        while(_currentTemp >= _MaxTemp){
+        while(_currentTemp > _MaxTemp){
         _currentTemp -= coolerPower;
         _engExeTime ++;
         }
@@ -134,11 +137,11 @@ void air_cond::showCurrTemp(){
 
 }
 
-void air_cond::checkValid(float minVal, float maxVal) {
+bool air_cond::checkValid(float minVal, float maxVal) {
     
     if ((minVal < MIN_TEMP) || (maxVal > MAX_TEMP) || (maxVal < minVal)){
         std::cout << "Tempreture range is invalid!\n";
-        exit(EXIT_FAILURE);
+        return false;
         }
-
+    return true;
 }

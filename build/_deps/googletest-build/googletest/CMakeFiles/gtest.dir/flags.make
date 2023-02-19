@@ -6,5 +6,5 @@ CXX_FLAGS =   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fex
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/behzad/daikin/build/_deps/googletest-src/googletest/include -I/home/behzad/daikin/build/_deps/googletest-src/googletest 
+CXX_INCLUDES = -I/home/behzad/daikin_test/build/_deps/googletest-src/googletest/include -I/home/behzad/daikin_test/build/_deps/googletest-src/googletest 
 

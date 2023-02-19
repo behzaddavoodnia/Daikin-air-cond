@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/behzad/daikin/air_cond.cpp" "/home/behzad/daikin/build/CMakeFiles/myLib.dir/air_cond.cpp.o"
+  "/home/behzad/daikin_test/air_cond.cpp" "/home/behzad/daikin_test/build/CMakeFiles/myLib.dir/air_cond.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

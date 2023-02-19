@@ -1,7 +1,7 @@
 # Make file names absolute:
 #
-get_filename_component(filename "/home/behzad/daikin/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.13.0.zip" ABSOLUTE)
-get_filename_component(directory "/home/behzad/daikin/build/_deps/googletest-src" ABSOLUTE)
+get_filename_component(filename "/home/behzad/daikin_test/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.13.0.zip" ABSOLUTE)
+get_filename_component(directory "/home/behzad/daikin_test/build/_deps/googletest-src" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'

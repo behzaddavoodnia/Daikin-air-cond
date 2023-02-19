@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/behzad/daikin/air_cond.cpp
+/home/behzad/daikin_test/air_cond.cpp
 air_cond.hpp
-/home/behzad/daikin/air_cond.hpp
+/home/behzad/daikin_test/air_cond.hpp
 
-/home/behzad/daikin/air_cond.hpp
+/home/behzad/daikin_test/air_cond.hpp
 iostream
 -
 sstream

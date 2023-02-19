@@ -37,6 +37,7 @@ public:
 
     virtual ~air_cond(){};
 
+    air_cond() = default;
     air_cond (float min,  float max) : _minTemp(min), _MaxTemp(max) {
 
         std::cout << "[====================== Hello Daikin! ====================]\n\n";
@@ -69,8 +70,8 @@ public:
     // Sensing the room temp from sensor
     virtual float SenseTempFromSensor(float analogTemp);
     
-    // Checks the inputs provided by user is valid or not
-    virtual void checkValid(float minVal, float maxVal);
+    // Checks the inputs provided by user is valid (true) or not (false)
+    virtual bool checkValid(float minVal, float maxVal);
     
     // Shows the sensed temp from the room sensor
     virtual void showSensedTemp();

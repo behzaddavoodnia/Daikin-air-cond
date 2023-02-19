@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/behzad/daikin/build/_deps/googletest-src/googletest/src/gtest_main.cc
+/home/behzad/daikin_test/build/_deps/googletest-src/googletest/src/gtest_main.cc
 cstdio
 -
 gtest/gtest.h
-/home/behzad/daikin/build/_deps/googletest-src/googletest/src/gtest/gtest.h
+/home/behzad/daikin_test/build/_deps/googletest-src/googletest/src/gtest/gtest.h
 
 _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h
 memory

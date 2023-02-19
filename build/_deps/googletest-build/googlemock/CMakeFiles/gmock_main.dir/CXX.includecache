@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/behzad/daikin/build/_deps/googletest-src/googlemock/src/gmock_main.cc
+/home/behzad/daikin_test/build/_deps/googletest-src/googlemock/src/gmock_main.cc
 iostream
 -
 gmock/gmock.h
-/home/behzad/daikin/build/_deps/googletest-src/googlemock/src/gmock/gmock.h
+/home/behzad/daikin_test/build/_deps/googletest-src/googlemock/src/gmock/gmock.h
 gtest/gtest.h
-/home/behzad/daikin/build/_deps/googletest-src/googlemock/src/gtest/gtest.h
+/home/behzad/daikin_test/build/_deps/googletest-src/googlemock/src/gtest/gtest.h
 tchar.h
 -
 

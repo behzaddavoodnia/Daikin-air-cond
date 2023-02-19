@@ -12,8 +12,8 @@ project(googletest-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(googletest-populate
                      "UPDATE_DISCONNECTED" "False" "URL" "https://github.com/google/googletest/archive/refs/tags/v1.13.0.zip"
-                    SOURCE_DIR          "/home/behzad/daikin/build/_deps/googletest-src"
-                    BINARY_DIR          "/home/behzad/daikin/build/_deps/googletest-build"
+                    SOURCE_DIR          "/home/behzad/daikin_test/build/_deps/googletest-src"
+                    BINARY_DIR          "/home/behzad/daikin_test/build/_deps/googletest-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

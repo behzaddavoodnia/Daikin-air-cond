@@ -16,7 +16,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 
-#add_library(myLib SHARED air_cond.cpp)
+#add_library(myLib STATIC air_cond.cpp)
 add_library(myLib SHARED air_cond.cpp)
 
 

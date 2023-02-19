@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/behzad/daikin/air_cond.hpp
+/home/behzad/daikin_test/air_cond.hpp
 iostream
 -
 sstream
@@ -18,7 +18,7 @@ cmath
 gtest/gtest.h
 -
 
-/home/behzad/daikin/main.cpp
+/home/behzad/daikin_test/main.cpp
 air_cond.hpp
-/home/behzad/daikin/air_cond.hpp
+/home/behzad/daikin_test/air_cond.hpp
 
