@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/behzad/daikin/air_cond.hpp
+iostream
+-
+sstream
+-
+string
+-
+cmath
+-
+gtest/gtest.h
+-
+
+/home/behzad/daikin/main.cpp
+air_cond.hpp
+/home/behzad/daikin/air_cond.hpp
+
