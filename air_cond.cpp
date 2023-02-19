@@ -46,14 +46,14 @@ float air_cond::SenseTempFromSensor(float analogTemp){
 
 void air_cond::setGoalTemp(float min, float max){
     _GoalTemp = (min + max) / 2;
-    std::cout << "Goal (target) tempreture should be: " << _GoalTemp << "\n";
+    std::cout << "Mean tempreture is: " << _GoalTemp << " °C\n";
 }
 
 
 void air_cond::Init(){
     
     float min, max;
-    std::cout << "Hello User! Please enter minimum and maximum tempreture: \n";
+    std::cout << "Hello User! Please enter minimum and maximum tempreture (°C): \n";
     std::cin >> min;
     std::cin >> max;
     checkValid(min, max);
@@ -69,14 +69,14 @@ void air_cond::Init(){
 void air_cond::UpdateCurrTemp(float heaterPower, float coolerPower){
 
     if(_currentTemp >= _minTemp && _currentTemp <= _MaxTemp){
-        std::cout << "Temp is: "<< _currentTemp << " and it is OK!\n";
+        std::cout << "Now, Temp is: "<< _currentTemp << " °C and it is OK!\n";
         mood = ok;
         _engExeTime = 0;
     }
     else if(_currentTemp < _minTemp && _currentTemp < _MaxTemp) {
 
-        mood = hot;
-        std::cout << "Wheather is: " << _currentTemp << " and it's too cold! Starting heater...\n";
+        mood = cold;
+        std::cout << "Now, Wheather is: " << _currentTemp << " °C and it's too cold! Starting heater...\n";
         
         while(_currentTemp <= _minTemp){
         _currentTemp += heaterPower;
@@ -85,8 +85,8 @@ void air_cond::UpdateCurrTemp(float heaterPower, float coolerPower){
     }
     else if (_currentTemp > _minTemp && _currentTemp > _MaxTemp) {
 
-        mood = cold;
-        std::cout << "Wheather is: " << _currentTemp << " and it's too hot! Starting cooler...\n";
+        mood = hot;
+        std::cout << "Now, Wheather is: " << _currentTemp << " °C and it's too hot! Starting cooler...\n";
 
         while(_currentTemp >= _MaxTemp){
         _currentTemp -= coolerPower;
@@ -106,6 +106,7 @@ void air_cond::UpdateCurrTemp(float heaterPower, float coolerPower){
 void air_cond::IncreaseTemp(float step, int numOfSteps){
     
     _currentTemp += (numOfSteps * step);
+    std::cout << "Increased Tempreture by: "<< numOfSteps * step << " °C\n";
 }
 
 
@@ -113,20 +114,22 @@ void air_cond::IncreaseTemp(float step, int numOfSteps){
 void air_cond::DecreaseTemp(float step, int numOfSteps){
     
     _currentTemp -= (numOfSteps * step);
+    std::cout << "Decreased Tempreture by: "<< numOfSteps * step << " °C\n";
+
 }
 
 
 void air_cond::showSensedTemp(){
     std::cout << "===========================================\n";
-    std::cout << "Desirable Tempreture is between: " << getMinTemp() <<" and " << getMaxTemp() << " \n";
-    std::cout << "Sensed Tempreture is: " << getCurrTemp() <<"\n";
+    std::cout << "Desirable Tempreture is between: " << getMinTemp() <<" °C and " << getMaxTemp() << " °C\n";
+    std::cout << "Sensed room Tempreture is: " << getCurrTemp() <<" °C\n";
     std::cout << "===========================================\n";
 
 }
 
 void air_cond::showCurrTemp(){
     std::cout << "===========================================\n";
-    std::cout << "Current Tempreture after "<< _engExeTime << " minutes is: " << getCurrTemp() <<"\n";
+    std::cout << "Current Tempreture after "<< _engExeTime << " minutes is: " << getCurrTemp() <<" °C\n";
     std::cout << "===========================================\n";
 
 }
